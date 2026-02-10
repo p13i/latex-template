@@ -1,0 +1,17 @@
+{
+  "name": "LaTeX (Overleaf-like + Node)",
+  "image": "qmcgaw/latexdevcontainer:latest-full",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y --no-install-recommends make && rm -rf /var/lib/apt/lists/* && make setup",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop"
+      ]
+    }
+  }
+}
